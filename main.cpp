@@ -18,7 +18,7 @@ int main(int argc, const char *argv[])
 
 	string fileNameA, fileNameB;
 	int act = 0;
-	int nA, nB, mA, mB;
+	int nA=0, nB=0, mA=0, mB=0;
 	try//работа через командную строку
 	{
 		options_description desc{ "Options" };
@@ -93,6 +93,10 @@ int main(int argc, const char *argv[])
 		cout << "\nМатрицы не введены!\n";
 		return 1;
 	}
+	else if (nA == 0 || mA == 0 || nB == 0 || mB == 0) {
+		cout << "\nРазмеры матриц не введены!\n";
+		return 1;
+	}
 
 	cout << endl;
 	cout << "Матрица A:" << endl;
@@ -107,6 +111,10 @@ int main(int argc, const char *argv[])
 	}
 	else if (act == 1) {
 		C = multMElem(A, nA, mA, B, nB, mB);
+	}
+	if (C == 0) {
+		cout << "\nНе соответствие размеров матриц!\n";
+		return 1;
 	}
 	cout << "Матрица C:" << endl;
 	outputM(C, nC, mC);

@@ -9,7 +9,6 @@ add_subdirectory(mat)
 
 target_link_libraries(KM mat)
 
-
 target_include_directories(KM PUBLIC "../boost_1_77_0" )
 target_link_directories(KM PUBLIC "../boost_1_77_0/stage/lib")
 
