@@ -72,6 +72,10 @@ TEST_F(TestSerialization, MultMEqel) {
     deleteM(C, nC, mC);
     deleteM(D, nC, mC);
 }
+TEST_F(TestSerialization, TestForTest) {
+    ASSERT_EQ(0, 0);
+    
+}
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
