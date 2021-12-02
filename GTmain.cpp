@@ -80,7 +80,10 @@ TEST_F(TestSerialization, SecondTestForTest) {
     ASSERT_EQ(0, 0);
     
 }
-
+TEST_F(TestSerialization, ThirdTestForTest) {
+    ASSERT_EQ(0, 0);
+    
+}
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
