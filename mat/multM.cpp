@@ -2,6 +2,8 @@
 
 double** multM(double** a, int na, int ma, double** b, int nb, int mb, int &nr, int &mr)
 {
+	if(a==0||b==0||na==0||ma==0||nb==0||mb==0)
+		return 0;
 	if (ma != nb)
 		return 0;
 	nr = na;

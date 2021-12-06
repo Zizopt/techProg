@@ -2,6 +2,8 @@
 
 double** multMElem(double** a, int na, int ma, double** b, int nb, int mb)
 {
+	if(a==0||b==0||na==0||ma==0||nb==0||mb==0)
+		return 0;
 	if (na != nb || ma!=mb)
 		return 0;
 	double** ret = new double* [na];

@@ -73,17 +73,17 @@ TEST_F(TestSerialization, MultMEqel) {
     deleteM(D, nC, mC);
 }
 TEST_F(TestSerialization, TestForTest) {
-    ASSERT_EQ(0, 0);
-    
+    ASSERT_EQ(0, 0);   
 }
-TEST_F(TestSerialization, SecondTestForTest) {
-    ASSERT_EQ(0, 0);
-    
+
+TEST_F(TestSerialization, NoMatrixMultMElem) {
+    ASSERT_EQ(0, multMElem(0,0,0,0,0,0));   
 }
-TEST_F(TestSerialization, ThirdTestForTest) {
-    ASSERT_EQ(0, 0);
-    
+TEST_F(TestSerialization, NoMatrixMultM) {
+	int nC, mC;
+    ASSERT_EQ(0, multM(0,0,0,0,0,0,nC,mC));
 }
+
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
