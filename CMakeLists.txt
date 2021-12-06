@@ -7,7 +7,6 @@ add_subdirectory(mat)
 add_subdirectory(gt)
 
 
-
 add_executable(KM main.cpp dopF.cpp)
 target_link_libraries(KM mat)
 target_include_directories(KM PUBLIC "./boost_1_77_0" )
