@@ -7,7 +7,6 @@ add_subdirectory(mat)
 add_subdirectory(gt)
 
 
-file(GLOB CPPS "*.cpp")
 
 add_executable(KM main.cpp dopF.cpp)
 target_link_libraries(KM mat)
@@ -15,7 +14,6 @@ target_include_directories(KM PUBLIC "./boost_1_77_0" )
 target_link_directories(KM PUBLIC "./boost_1_77_0/stage/lib")
 
 
-file(GLOB GTCPPS "./*.cpp")
 add_executable(GTest GTmain.cpp dopF.cpp)
 target_link_libraries(GTest mat)
 target_link_libraries(GTest gtest)
