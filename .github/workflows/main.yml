@@ -22,7 +22,7 @@ jobs:
         run: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DNOTTEST=OFF ..
 
       - name: Run build
-        run: cd build && cmake --build . 
+        run: cd build && cmake --build . --config Release
         
       - name: Run test
         run: build/Release/GTest.exe
