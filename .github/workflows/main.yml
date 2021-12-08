@@ -27,7 +27,7 @@ jobs:
       - name: Run test
         run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt
         
-      - uses: Zizopt/techProg@master
+
         with:
           path: ./readme.md
           contents: |
