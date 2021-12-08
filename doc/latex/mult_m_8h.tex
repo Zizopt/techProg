@@ -1,0 +1,45 @@
+\hypertarget{mult_m_8h}{}\doxysection{Файл mat/multM.h}
+\label{mult_m_8h}\index{mat/multM.h@{mat/multM.h}}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+double $\ast$$\ast$ \mbox{\hyperlink{mult_m_8h_a7ae3818e1344f4eb45d77a88b88aae95}{multM}} (double $\ast$$\ast$a, int na, int ma, double $\ast$$\ast$b, int nb, int mb, int \&nr, int \&mr)
+\begin{DoxyCompactList}\small\item\em Функция, считающая произведение матриц. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл для функции перемножения матриц. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{mult_m_8h_a7ae3818e1344f4eb45d77a88b88aae95}\label{mult_m_8h_a7ae3818e1344f4eb45d77a88b88aae95}} 
+\index{multM.h@{multM.h}!multM@{multM}}
+\index{multM@{multM}!multM.h@{multM.h}}
+\doxysubsubsection{\texorpdfstring{multM()}{multM()}}
+{\footnotesize\ttfamily double $\ast$$\ast$ multM (\begin{DoxyParamCaption}\item[{double $\ast$$\ast$}]{a,  }\item[{int}]{na,  }\item[{int}]{ma,  }\item[{double $\ast$$\ast$}]{b,  }\item[{int}]{nb,  }\item[{int}]{mb,  }\item[{int \&}]{nr,  }\item[{int \&}]{mr }\end{DoxyParamCaption})}
+
+
+
+Функция, считающая произведение матриц. 
+
+Функция возвращает матрицу C, равную произведению матриц A на B. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em a} & первая матрица A \\
+\hline
+\mbox{\texttt{ in}}  & {\em na} & количество строк матрицы А \\
+\hline
+\mbox{\texttt{ in}}  & {\em ma} & количество столбцов матрицы А \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & вторая матрица B \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb} & количество строк матрицы B \\
+\hline
+\mbox{\texttt{ in}}  & {\em mb} & количество столбцов матрицы B \\
+\hline
+\mbox{\texttt{ out}}  & {\em nr} & количество строк матрицы B \\
+\hline
+\mbox{\texttt{ out}}  & {\em mr} & количество столбцов матрицы B \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+матрица C = A $\ast$ B 
+\end{DoxyReturn}
