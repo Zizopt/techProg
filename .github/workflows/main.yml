@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
   
 
-jobs:
+jobs: read-all|write-all
   build:
     runs-on: windows-2022
 
@@ -25,4 +25,6 @@ jobs:
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt &&  git commit readme.md -m "Actions" && git push
+        run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt
+        
+        
