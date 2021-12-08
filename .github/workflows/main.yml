@@ -25,4 +25,4 @@ jobs:
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: build/Release/GTest.exe
+        run: build/Release/GTest.exe > run.txt && sed '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt
