@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
   
 
-jobs: read-all|write-all
+jobs:
   build:
     runs-on: windows-2022
 
@@ -25,6 +25,11 @@ jobs: read-all|write-all
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt
-        
+        run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt 
+      - uses: Zizopt/techProg@master
+        with:
+          path: ${{ env.home }}/readme.md
+          contents: |
+            cat readme.md
+          write-mode: overwrite
         
