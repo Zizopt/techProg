@@ -25,4 +25,17 @@ jobs:
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: build/Release/GTest.exe > run.txt && sed -n '/\[==========\] Running/,$d' readme.md && cat run.txt >> readme.md && echo \`\`\` >> readme.md && cat run.txt && git config --global user.email "alexkonnov.999@mail.ru" && git config --global user.name "Lex" && git add readme.md && git commit -m "Update readme.md" && git push
+        run: build/Release/GTest.exe > run.txt && cat run.txt
+        
+      - name: Writing result
+        run:| 
+          sed -ni '/## Результаты тестов:/,$d' readme.md 
+          echo \#\# Результаты тестов: >> readme.md
+          echo \`\`\` >> readme.md
+          cat run.txt >> readme.md 
+          echo \`\`\` >> readme.md  
+          git config --global user.email "alexkonnov.999@mail.ru"
+          git config --global user.name "Lex"
+          git add readme.md
+          git commit -m "Update readme.md"
+          git push
