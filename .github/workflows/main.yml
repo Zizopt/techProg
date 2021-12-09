@@ -28,7 +28,7 @@ jobs:
         run: build/Release/GTest.exe > run.txt && cat run.txt
         
       - name: Writing result
-        run:| 
+        run: | 
           sed -ni '/## Результаты тестов:/,$d' readme.md 
           echo \#\# Результаты тестов: >> readme.md
           echo \`\`\` >> readme.md
