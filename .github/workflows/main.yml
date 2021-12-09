@@ -25,12 +25,13 @@ jobs:
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: build/Release/GTest.exe > run.txt && cat run.txt
+        run: build/Release/GTest.exe
         
       - name: Writing result
+        continue-on-error: true
         if: always()
         run: | 
-          cat run.txt
+          build/Release/GTest.exe > run.txt
           sed '/## Результаты тестов:/,$d' readme.md > newReadme.md
           echo '## Результаты тестов:' >> newReadme.md
           echo '```' >> newReadme.md
