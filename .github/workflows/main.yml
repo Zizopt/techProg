@@ -29,11 +29,12 @@ jobs:
         
       - name: Writing result
         run: | 
-          sed -ni '/## Результаты тестов:/,$d' readme.md 
-          echo \#\# Результаты тестов: >> readme.md
-          echo \`\`\` >> readme.md
-          cat run.txt >> readme.md 
-          echo \`\`\` >> readme.md  
+          sed -n '/## Результаты тестов:/,$d' readme.md > newReadme.md
+          echo \#\# Результаты тестов: >> newReadme.md
+          echo \`\`\` >> newReadme.md
+          cat run.txt >> newReadme.md
+          echo \`\`\` >> newReadme.md
+          cat newReadme.md > readme.md
           git config --global user.email "alexkonnov.999@mail.ru"
           git config --global user.name "Lex"
           git add readme.md
