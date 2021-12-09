@@ -28,6 +28,7 @@ jobs:
         run: build/Release/GTest.exe > run.txt && cat run.txt
         
       - name: Writing result
+        if: always()
         run: | 
           sed '/## Результаты тестов:/,$d' readme.md > newReadme.md
           echo '## Результаты тестов:' >> newReadme.md

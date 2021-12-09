@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "KM", "index.html", [
+    [ "KM", "md_readme.html", [
+      [ "Результаты тестов:", "md_readme.html#autotoc_md3", null ]
+    ] ],
     [ "Классы", "annotated.html", [
       [ "Классы", "annotated.html", "annotated_dup" ],
       [ "Алфавитный указатель классов", "classes.html", null ],
