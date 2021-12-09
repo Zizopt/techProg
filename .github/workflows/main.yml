@@ -30,6 +30,7 @@ jobs:
       - name: Writing result
         if: always()
         run: | 
+          cat run.txt
           sed '/## Результаты тестов:/,$d' readme.md > newReadme.md
           echo '## Результаты тестов:' >> newReadme.md
           echo '```' >> newReadme.md
