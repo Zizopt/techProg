@@ -25,7 +25,7 @@ jobs:
         run: cd build && cmake --build . --config Release
         
       - name: Run test
-        run: echo -n > run.txt && build/Release/GTest.exe > run.txt && cat run.txt
+        run: echo '' > run.txt && build/Release/GTest.exe > run.txt && cat run.txt
         
       - name: Writing result
         if: always()
