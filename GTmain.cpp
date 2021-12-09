@@ -73,7 +73,7 @@ TEST_F(TestSerialization, MultMEqel) {
     deleteM(D, nC, mC);
 }
 TEST_F(TestSerialization, TestForTest) {
-    ASSERT_EQ(0, 0);   
+    ASSERT_EQ(0, 1);   
 }
 
 TEST_F(TestSerialization, NoMatrixMultMElem) {
