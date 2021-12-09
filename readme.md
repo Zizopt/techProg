@@ -40,7 +40,10 @@ Options:
 [ RUN      ] TestSerialization.MultMEqel
 [       OK ] TestSerialization.MultMEqel (0 ms)
 [ RUN      ] TestSerialization.TestForTest
-[       OK ] TestSerialization.TestForTest (0 ms)
+D:\a\techProg\techProg\GTmain.cpp(76): error: Expected equality of these values:
+  0
+  1
+[  FAILED  ] TestSerialization.TestForTest (0 ms)
 [ RUN      ] TestSerialization.NoMatrixMultMElem
 [       OK ] TestSerialization.NoMatrixMultMElem (0 ms)
 [ RUN      ] TestSerialization.NoMatrixMultM
@@ -49,5 +52,9 @@ Options:
 
 [----------] Global test environment tear-down
 [==========] 7 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 7 tests.
+[  PASSED  ] 6 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] TestSerialization.TestForTest
+
+ 1 FAILED TEST
 ```
