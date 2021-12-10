@@ -26,4 +26,4 @@ Options:
 
 ## Результат тестов
 
-![example workflow](https://github.com/Zizopt/techProg/actions/workflows/main.yml/badge.svg)
+**mat:** ![example workflow](https://github.com/Zizopt/techProg/actions/workflows/main.yml/badge.svg)
