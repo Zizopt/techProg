@@ -1,3 +1,4 @@
 build/
 boost_1_77_0/
 *.bat
+doc/

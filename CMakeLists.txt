@@ -13,6 +13,3 @@ if(NOTTEST)
 	target_link_directories(KM PUBLIC "./boost_1_77_0/stage/lib")
 endif()
 
-add_executable(GTest GTmain.cpp dopF.cpp)
-target_link_libraries(GTest mat)
-target_link_libraries(GTest gtest)
