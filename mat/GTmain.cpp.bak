@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "dopF.h"
+#include "../dopF.h"
 #include "mat/multM.h"
 #include "mat/multMElem.h"
 

@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../dopF.h"
-#include "mat/multM.h"
-#include "mat/multMElem.h"
+#include "multM.h"
+#include "multMElem.h"
 
 class TestSerialization : public ::testing::Test {
 public:
