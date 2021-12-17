@@ -88,7 +88,7 @@ TEST_F(TestSerialization, TestForTest1) {
     ASSERT_EQ(0, 0);   
 }
 
-TEST_F(TestSerialization, TestForTest1) {
+TEST_F(TestSerialization, TestForTest2) {
     ASSERT_EQ(0, 0);   
 }
 
