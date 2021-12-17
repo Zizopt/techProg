@@ -21,7 +21,20 @@ int main(int argc, const char *argv[])
 	int nA=0, nB=0, mA=0, mB=0;
 	try//работа через командную строку
 	{
-		
+		options_description desc{ "Options" };
+		desc.add_options()
+			("help,h", "Help screen")
+			("action", value<string>(),"Multiplies matrix if == '*' or multiplies elements of matrix if == '.*'")
+			("fileA", value<string>(), "File name A")//файл с матрицей А
+			("fileB", value<string>(), "File name B")//файл с матрицей B
+			("inputA",  "Input A")//ввод А
+			("inputB",  "Input B")//ввод В
+			("nA", value<int>(), "Input n A")//nA
+			("nB", value<int>(), "Input n B")//nB
+			("mA", value<int>(), "Input m A")//mA
+			("mB", value<int>(), "Input m B");//mB
+
+		variables_map vm;
 
 		store(parse_command_line(argc, argv, desc), vm);
 		notify(vm);
